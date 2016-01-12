@@ -20,5 +20,70 @@ body, html {
 }
 
 body {
+  background-color: #1F1E34;
+  color: #FFF;
+  font-family: "Avenir Next",
+  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+  Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 100;
+}
+
+p {
+  font-size: 24px;
+}
+
+a {
+  font-weight: 400;
+  color: #FFF;
+}
+
+a:hover {
+  font-weight: 400;
+  color: #DADADA;
+  text-decoration: none;
+}
+
+.section {
+  height:100vh;
+  /*background-color: rgba(255,0,0,0.3);*/
+  /*border: 2px solid #FFF;*/
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-link {
+  flex-direction: row;
+}
+
+.section-link a {
+  padding: 20px;
+}
+
+.section--left-right {
+  flex-direction: row;
+}
+
+.iphone-demo {
   background-color: rgba(255,0,0,0.3);
+  align-self:stretch;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.feature-description {
+  background-color: rgba(0,255,0,0.3);
+  align-self:stretch;
+  flex-basis: 0;
+  flex-grow: 1;
 }
