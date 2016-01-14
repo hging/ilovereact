@@ -1,34 +1,4 @@
-body, div, span {
-  box-sizing: border-box;
-  position: relative;
-
-  display: -webkit-box;
-
-  display: -webkit-flex;
-
-  display: -ms-flexbox;
-
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-
-  border: 0 solid black;
-  margin: 0;
-  padding: 0;
-  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -452,11 +422,36 @@ td,
 th {
   padding: 0;
 }
-}
+body, div, span {
+  box-sizing: border-box;
+  position: relative;
 
-body, html {
-  width: 100%;
-  height: 100%;
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+
+  border: 0 solid black;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -471,6 +466,8 @@ body {
 h1 {
   font-size: 64px;
   font-weight: 100;
+  position: relative;
+
 }
 
 h2 {
@@ -493,10 +490,17 @@ a:hover {
   text-decoration: none;
 }
 
+#intro-section {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .section {
   height:100vh;
   /*background-color: rgba(255,0,0,0.3);*/
   /*border: 2px solid #FFF;*/
+  overview: hidden;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -505,11 +509,25 @@ a:hover {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  overflow: hidden;
+}
+
+.section h1 {
+  position: relative;
+}
+
+.react-logo {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(31,30,52,1));
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
 }
 
 .section-link {
@@ -533,10 +551,6 @@ a:hover {
 }
 
 .iphone-demo {
-  background-color: rgba(255,0,0,0.3);
-  -webkit-align-self:stretch;
-      -ms-flex-item-align:stretch;
-          align-self:stretch;
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
           flex-basis: 0;
@@ -546,11 +560,21 @@ a:hover {
           flex-grow: 1;
 }
 
+.iphone-demo-frame {
+  height: 630px;
+  width: 300px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+.iphone-demo-frame .iphone-demo-screen {
+  position: absolute;
+  top: 90px;
+  left: 25px;
+}
+
 .feature-description {
-  background-color: rgba(0,255,0,0.3);
-  -webkit-align-self:stretch;
-      -ms-flex-item-align:stretch;
-          align-self:stretch;
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
           flex-basis: 0;
@@ -558,4 +582,36 @@ a:hover {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.android-robot {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#slider-control {
+  padding: 3px;
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-100%, 0%);
+          transform: translate(-100%, 0%);
+}
+
+#slider-control a {
+  padding: 3px;
+}
+
+#slider-control .dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+#slider-control .active .dot {
+  background-color: #fff;
 }
